@@ -1,0 +1,21 @@
+{
+  "name": "Regex",
+  "version": "0.1.0",
+  "description": "Flat Regex Library",
+  "author": "Braden Steffaniak",
+  "license": "ISC",
+  "scripts": {},
+  "main": {
+    "source": "src",
+    "dependencies": {
+
+    }
+  },
+  "test": {
+    "mainClass": "flatlang/http/Regex_TestSuite",
+    "source": "src",
+    "dependencies": {
+      "github:FlatLang/Nest": "master"
+    }
+  }
+}

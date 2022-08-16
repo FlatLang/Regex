@@ -37,7 +37,7 @@ class Regex {
 
             if (re == NULL) {
                 #{
-                    throw new Exception("Failed to compile regex '#regex'")
+                    throw Exception("Failed to compile regex '#regex'")
                 }
 
                 return #{(Array)null};
@@ -98,7 +98,7 @@ class Regex {
 
                 if (rc < 0) {
                     #{
-                        throw new Exception("Matching error for regex '#regex'")
+                        throw Exception("Matching error for regex '#regex'")
                     }
                 }
 
@@ -123,7 +123,7 @@ class Regex {
 
                 if (rc == 0) {
                     #{
-                        throw new Exception("Regex returned too many results to be stored variable")
+                        throw Exception("Regex returned too many results to be stored variable")
                     }
                 }
             }
@@ -135,7 +135,7 @@ class Regex {
             #{matchCount} = currentSize;
 
             #{
-                var matches = new Array<Match>(matchCount)
+                var matches = Array<Match>(matchCount)
             }
 
             converted = NOVA_MALLOC(sizeof(int) * currentSize * 2);
@@ -149,7 +149,7 @@ class Regex {
         }
 
         for (m in 0..matchCount) {
-            matches[m] = new Match(search, values[m * 2], values[m * 2 + 1])
+            matches[m] = Match(search, values[m * 2], values[m * 2 + 1])
         }
 
         return matches

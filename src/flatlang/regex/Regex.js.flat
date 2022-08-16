@@ -5,7 +5,7 @@ class Regex {
         var Int count
         var Int start
         var String str
-        let matches = new Array<Match>()
+        let matches = Array<Match>()
 
         external {
             var regex = new RegExp(#{regexStr.chars.data}, "g");
@@ -14,7 +14,7 @@ class Regex {
             for (var m of regexMatches) {
                 #{start} = m.index;
                 #{count} = m[0].length;
-                #{matches.add(new Match(search, start, start + count))};
+                #{matches.add(Match(search, start, start + count))};
             }
         }
 

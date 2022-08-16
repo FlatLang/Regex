@@ -9,11 +9,11 @@ extension {
         native Int count
 
         external js {
-            #{nativeStrs} = #{this.chars.data}.split(new RegExp(#{regex.pattern.chars.data}));
+            #{nativeStrs} = #{this.chars.data}.split(RegExp(#{regex.pattern.chars.data}));
             #{count} = #{nativeStrs}.length;
         }
 
-        return new Array(count).map({
+        return Array(count).map({
             native Char[] buf
             native Int length
 
@@ -22,9 +22,9 @@ extension {
                 #{length} = #{buf}.length;
             }
 
-            let array = new StringCharArray(buf, length)
+            let array = StringCharArray(buf, length)
 
-            return new String(array)
+            return String(array)
         })
     }
 

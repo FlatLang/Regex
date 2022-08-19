@@ -1,6 +1,6 @@
-package "flatlang/regex"
+package flatlang/regex
 
-import "pcre/pcre2.h"
+import pcre/pcre2.h
 
 class Regex {
   public static getMatches(String regex, String search) -> Match[] {

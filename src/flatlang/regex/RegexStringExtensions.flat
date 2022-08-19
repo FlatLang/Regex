@@ -1,6 +1,6 @@
-package "flatlang/regex"
+package flatlang/regex
 
-import "flatlang/datastruct/list/StringCharArray"
+import flatlang/datastruct/list/StringCharArray
 
 extension {
   [Target js]

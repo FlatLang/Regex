@@ -1,4 +1,4 @@
-package "flatlang/regex"
+package flatlang/regex
 
 class Regex {
   public static getMatches(String regexStr, String search) -> Match[] {

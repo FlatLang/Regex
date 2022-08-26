@@ -1,7 +1,9 @@
 package flatlang/regex
 
 class Pattern {
-  visible String pattern
-
   public construct(visible String pattern) {}
+
+  override public toString() => "|
+    /#{pattern}/g
+    |"
 }

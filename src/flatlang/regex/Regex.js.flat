@@ -1,15 +1,17 @@
 package flatlang/regex
 
 class Regex {
-  public static getMatches(String regexStr, String search) -> Match[] {
+  public static getMatches(String pattern, String search) =>
+    getMatches(Pattern(pattern), search)
+
+  public static getMatches(Pattern pattern, String search) -> Match[] {
     var Int count
     var Int start
     var String str
     let matches = Array<Match>()
 
     external {
-      var regex = new RegExp(#{regexStr.chars.data}, "g");
-      var regexMatches = #{search.chars.data}.matchAll(regex);
+      var regexMatches = #{search.chars.data}.matchAll(#{pattern.regexObj});
 
       for (var m of regexMatches) {
         #{start} = m.index;

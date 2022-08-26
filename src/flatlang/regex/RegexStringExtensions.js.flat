@@ -1,0 +1,29 @@
+package flatlang/regex
+
+import flatlang/datastruct/list/StringCharArray
+
+extension {
+  public split(String this, Pattern regex) -> String[] {
+    native Char[][] nativeStrs
+    native Int count
+
+    external js {
+      #{nativeStrs} = #{this.chars.data}.split(RegExp(#{regex.pattern.chars.data}));
+      #{count} = #{nativeStrs}.length;
+    }
+
+    return Array(count).map({
+      native Char[] buf
+      native Int length
+
+      external js {
+        #{buf} = #{nativeStrs[_2]};
+        #{length} = #{buf}.length;
+      }
+
+      let array = StringCharArray(buf, length)
+
+      return String(array)
+    })
+  }
+}

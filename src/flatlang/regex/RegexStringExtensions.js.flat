@@ -26,4 +26,14 @@ extension {
       return String(array)
     })
   }
+
+  public replace(String this, Pattern pattern, String replace) -> String {
+    native var Char[] data
+
+    external {
+      #{data} = #{this.chars.data}.replace(#{pattern.regexObj}, #{replace.chars.data});
+    }
+
+    return String(data)
+  }
 }

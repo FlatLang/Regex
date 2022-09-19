@@ -1,4 +1,4 @@
-package flatlang/regex
+package flat/regex
 
 import pcre/pcre2.h
 

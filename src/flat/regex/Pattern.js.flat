@@ -1,4 +1,4 @@
-package flatlang/regex
+package flat/regex
 
 class Pattern {
   visible native var Object regexObj

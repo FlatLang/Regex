@@ -1,6 +1,6 @@
-package flatlang/regex
+package flat/regex
 
-import flatlang/datastruct/list/StringCharArray
+import flat/datastruct/list/StringCharArray
 
 extension {
   public split(String this, Pattern regex) -> String[] {

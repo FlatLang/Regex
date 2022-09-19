@@ -1,4 +1,4 @@
-package flatlang/regex
+package flat/regex
 
 class Match {
   visible Int count => end - start

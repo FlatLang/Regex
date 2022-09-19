@@ -1,4 +1,4 @@
-package flatlang/regex
+package flat/regex
 
 class Regex {
   public static containsMatch(Pattern pattern, String search) => containsMatch(pattern.pattern, search)

@@ -14,7 +14,7 @@
       }
     },
     "test": {
-      "mainClass": "flatlang/regex/Regex_TestSuite",
+      "mainClass": "flat/regex/Regex_TestSuite",
       "source": "src/**/*_Test*.flat",
       "dependencies": {
         "github:FlatLang/Nest": "master",

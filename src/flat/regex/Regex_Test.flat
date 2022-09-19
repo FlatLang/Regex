@@ -1,6 +1,6 @@
-package flatlang/regex
+package flat/regex
 
-import flatlang/regex/Regex
+import flat/regex/Regex
 
 testable class {
   test `can create`() {

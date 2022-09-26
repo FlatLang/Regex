@@ -22,4 +22,36 @@ class Regex {
 
     return matches
   }
+
+  public static getMatchGroups(Pattern pattern, String search) -> MatchGroup[] {
+    var Int index
+    var Int matchIndex = 0
+    native var Char[] groupData
+    native var String groupStr
+    let matches = Array<MatchGroup>()
+
+    external {
+      var regexMatches = #{search.chars.data}.matchAll(#{pattern.regexObj});
+
+      for (var match of regexMatches) {
+        match.forEach((group, i) => {
+          #{groupData} = group;
+          #{groupStr} = typeof group === 'undefined' ? #{null} : #{String(groupData)};
+          #{index} = i;
+          #{
+            matches.add(
+              MatchGroup(
+                value: groupStr,
+                matchIndex: matchIndex,
+                groupIndex: index
+              )
+            )
+          };
+        });
+        #{matchIndex++};
+      }
+    }
+
+    return matches
+  }
 }

@@ -7,6 +7,5 @@ class Match {
 
   public construct(visible String source, visible Int start, visible Int end) {}
 
-  [Override]
-  public toString() => match
+  override public toString() => match
 }

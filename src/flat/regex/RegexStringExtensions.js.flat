@@ -2,7 +2,7 @@ package flat/regex
 
 import flat/datastruct/list/StringCharArray
 
-extension {
+extension class {
   public split(String this, Pattern regex) -> String[] {
     native Char[][] nativeStrs
     native Int count

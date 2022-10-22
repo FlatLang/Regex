@@ -2,7 +2,7 @@ package flat/regex
 
 import flat/datastruct/list/StringCharArray
 
-extension {
+extension class {
   public replace(String this, Pattern pattern, String replace) -> String {
     var output = this
     var Int offset = 0

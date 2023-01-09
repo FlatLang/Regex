@@ -7,7 +7,7 @@ extension class {
     native Char[][] nativeStrs
     native Int count
 
-    external js {
+    external {
       #{nativeStrs} = #{this.chars.data}.split(RegExp(#{regex.pattern.chars.data}));
       #{count} = #{nativeStrs}.length;
     }
@@ -16,7 +16,7 @@ extension class {
       native Char[] buf
       native Int length
 
-      external js {
+      external {
         #{buf} = #{nativeStrs[_2]};
         #{length} = #{buf}.length;
       }

@@ -4,16 +4,16 @@ import flat/datastruct/list/StringCharArray
 
 extension class {
   public split(String this, Pattern regex) -> String[] {
-    native Char[][] nativeStrs
-    native Int count
+    native_array native Char[][] nativeStrs
+    native_array native Int count
 
     external {
 
     }
 
     return Array(count).map({
-      native Char[] buf
-      native Int length
+      native_array native Char[] buf
+      native_array native Int length
 
       external {
 
@@ -26,7 +26,7 @@ extension class {
   }
 
   public replace(String this, Pattern pattern, String replace) -> String {
-    native var Char[] data
+    native_array native var Char[] data
 
     external {
 

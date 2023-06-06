@@ -1,11 +1,11 @@
 package flat/regex
 
 class Match {
-  visible Int count => end - start
+    visible Int count => end - start
 
-  visible String match => source.substring(start, end)
+    visible String match => source.substring(start, end)
 
-  public construct(visible String source, visible Int start, visible Int end) {}
+    public construct(visible String source, visible Int start, visible Int end) {}
 
-  override public toString() => match
+    override public toString() => match
 }

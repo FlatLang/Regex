@@ -1,11 +1,11 @@
 package flat/regex
 
 class Pattern {
-  visible native var Object regexObj
+    visible native var Object regexObj
 
-  public construct(visible String pattern) {
-    external {
-      #{this.regexObj} = new RegExp(#{pattern.chars.data}, "g");
+    public construct(visible String pattern) {
+        external {
+            #{this.regexObj} = new RegExp(#{pattern.chars.data}, "g");
+        }
     }
-  }
 }
